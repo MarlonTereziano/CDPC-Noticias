@@ -5,4 +5,6 @@ const { withExpo } = require('@expo/next-adapter');
 
 module.exports = withExpo({
   projectRoot: __dirname,
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  
 });

@@ -1,14 +1,18 @@
 import React from 'react';
-import {Container, Title} from './styles'; 
+import {Container, Title, Logo} from './styles'; 
+import LogoIF from '../../assets/img/if.png';
+
+
 
 
 export const Welcome: React.FC = () => {
 
     return(
-        <>
-            <Container>
-                <Title>AAA</Title>
-            </Container>
-        </>
+        <Container>
+            <Title>AAAA👋</Title>
+            <Logo source = {LogoIF}/>
+        </Container>
     );
 }
+
+  
