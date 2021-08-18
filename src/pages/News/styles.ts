@@ -14,6 +14,7 @@ export const ContentNews = styled.View`
     width: 95%;
     height: 90%;
     border-radius: 30px;
+    border: 3px solid grey;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -21,4 +22,8 @@ export const ContentNews = styled.View`
     position: absolute;
     background-color: #ffffff;
     overflow: scroll;
+`
+
+export const ContainerNews = styled.View`
+    
 `

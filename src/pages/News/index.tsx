@@ -3,24 +3,27 @@ import { useAuth } from '../../hooks/types';
 import {
     Container,
     ContentNews,
-} from './styles'; 
+    ContainerNews,
+} from './styles';
 
-import {Text, View, VirtualizedList} from 'react-native';
+import { Text, View, VirtualizedList, Image } from 'react-native';
 
-interface iNews{
-    titulo: String;
-    id: Number;
+interface iNews {
+    title: string;
+    content: string;
+    id: number;
+    urlToImage: string;
 }
 
 export const News: React.FC = () => {
 
-    const [News, setNews] = useState<News[]>([]);
+    const [News, setNews] = useState<iNews[]>([]);
 
     const {
-        getNews 
+        getNews
     } = useAuth();
 
-    const allNews = async () =>{
+    const allNews = async () => {
         const resultNews = await getNews();
         setNews(resultNews);
     }
@@ -31,33 +34,39 @@ export const News: React.FC = () => {
     }, [])
 
 
-    const Card = ({News}:{News: iNews})=>{
+    const Card = ({ News }: { News: iNews }) => {
         return (
-         <View style = {{padding: 30, backgroundColor:'red', marginBottom: 2}}>
-           <Text>{News.titulo}</Text>
-           {/* <Image
-            source={{
-              uri: photo.img_src
-            }}
-            style={ {
-              width: 'auto',
-              height: '80%',
-            }}
-          /> */}
-         </View>)
-       }
+            <View style={{ padding: 30, marginBottom: 2 }}>
+                <ContainerNews>
+                    <Text style={{ fontWeight: 'bold' }}>{News.title}</Text>
+                    <Text style={{ marginTop: 5 }}>{News.content}</Text>
+                    <Image
+                        source={{
+                            uri:News.urlToImage
+                        }}
+                        style={{
+                            display:'flex',
+                            justifyContent: 'center',
+                            width: 200,
+                            height: 200,
+                        }}
+                    />
 
-    return(
+                </ContainerNews>
+            </View>)
+    }
+
+    return (
         <Container>
             <ContentNews>
-            <VirtualizedList<iNews>
-                data={News}
-                initialNumToRender={10}
-                renderItem={({ item }) => <Card News={item}/>}
-                keyExtractor={item => item.id.toString()}
-                getItemCount={data => data.length} 
-                getItem = {(data,index) => data[index]}
-            />
+                <VirtualizedList<iNews>
+                    data={News}
+                    initialNumToRender={10}
+                    renderItem={({ item }) => <Card News={item} />}
+                    keyExtractor={item => item.title}
+                    getItemCount={data => data.length}
+                    getItem={(data, index) => data[index]}
+                />
             </ContentNews>
         </Container>
     );
