@@ -1,11 +1,13 @@
 import React,{createContext, useCallback, useContext} from 'react';
 import { api } from '../services/api';
 
-interface NewsCrendentials{
+interface News{
+  titulo: String;
+  id: Number;
 }
 
 interface AuthContextData {
-    getNews(credentials: NewsCrendentials): Promise<void>;
+    getNews(): Promise<News[]>;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -13,10 +15,10 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 const AuthProvider: React.FC = ({ children }) => {
 
   const getNews = useCallback(async() => {
-    const response = await api.get(`/?tipo=noticias`);
-    let noticias = response.data.noticias;
+    const response = await api.get('/?tipo=noticias');
+    let noticias = response.data.items;
     
-    return JSON.parse(noticias);
+    return noticias;
     }, []);
 
     return (
