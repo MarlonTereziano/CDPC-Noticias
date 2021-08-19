@@ -18,6 +18,7 @@ import {
     VirtualizedList,
     Image,
     Linking,
+    ActivityIndicator,
 } from 'react-native';
 
 interface iNews {

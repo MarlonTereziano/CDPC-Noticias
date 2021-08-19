@@ -29,7 +29,7 @@ export const Welcome: React.FC = () => {
                 <TitleCDPC>OTÍCIAS</TitleCDPC>
             </ContentTitle>
 
-            <Title>BEM-VINDO !</Title>
+            <Title>  BEM-VINDO !</Title>
             <ButtonEntrar onPress={() => navigation.navigate('News', {})}><TextEntrar>ENTRAR</TextEntrar></ButtonEntrar>
 
             <Footer>

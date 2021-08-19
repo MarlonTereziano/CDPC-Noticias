@@ -46,14 +46,15 @@ export const About: React.FC = () => {
                     marginTop: 30,
                     fontFamily: 'AGENCYR',
                     fontSize: 25,
-                    textAlign: 'justify'
+                    textAlign: 'justify',
+                    marginBottom:50
                 }}>
                     A CDPC Notícias nasceu com um propósito bem definido: Ser a forma mais fácil de deixar
                     estudantes e população mais próximos da informação! Este portal de notícias na palma da sua mão
                     reune informações de diversas fontes, como por exemplo: UOL, Abril, Globo, CanalTech, entre inúmeras outras plataformas, sempre
                     filtrando informações relacionadas da Ciência, e não se preocupe, as atualizações são automáticas!
                 </Text>
-                <Icon name="newspaper-o" size={80} color='white' />
+                <Icon name="newspaper-o" size={200} color='black' />
             </ContentAbout>
         </Container>
     );
