@@ -9,8 +9,6 @@ import {
     TitleCDPC,
     ButtonEntrar,
     Footer,
-    ContainerLeft,
-    ContainerRight,
     TextEntrar,
 } from './styles'; 
 
@@ -35,12 +33,8 @@ export const Welcome: React.FC = () => {
             <ButtonEntrar onPress={() => navigation.navigate('News', {})}><TextEntrar>ENTRAR</TextEntrar></ButtonEntrar>
 
             <Footer>
-                <ContainerLeft>
                 <LogoCampus source = {LogoIF}/>
-                </ContainerLeft>
-                <ContainerRight>
                 <LogoPc source = {LogoCdpc}/>
-                </ContainerRight>
             </Footer>
         </Container>
     );

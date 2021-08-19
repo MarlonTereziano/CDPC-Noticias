@@ -6,6 +6,7 @@ interface News {
   content: string;
   id: number;
   urlToImage: string;
+  url: string;
 }
 
 interface AuthContextData {
@@ -18,7 +19,10 @@ const AuthProvider: React.FC = ({ children }) => {
 
   const getNews = useCallback(async () => {
     const response = await api.get('');
+
+
     let noticias = response.data.articles;
+
 
     // noticias = noticias.map((item, index) => {
     //   item.id = index;

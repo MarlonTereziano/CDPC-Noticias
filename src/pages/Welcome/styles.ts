@@ -8,11 +8,11 @@ export const Container = styled.View`
   position: absolute;
   align-items:center;
   justify-content: center;
-  background-color:#00CC00;
+  background-color:#369831;
 `;
 
 export const ContentTitle = styled.View`
-  margin-top: 15%;
+  margin-top: 70px;
   align-Items: center;
   justify-content: center;
   flex-direction: row;
@@ -39,15 +39,14 @@ export const TitleCDPC = styled.Text`
 export const Title = styled.Text`
   display: flex;
   align-items: center;
+  margin-top: -120px;
   justify-content: center;
-  margin-top: -40%;
   font-size: 30px;
   font-family: 'AGENCYB';
   color: #ffffff;
 `;
 
 export const ButtonEntrar = styled.TouchableOpacity`
-  margin-top: 3%;
   width: 50%;
   height: 6%;
   border-radius: 35px;
@@ -73,7 +72,7 @@ export const Footer = styled.View`
   flex-direction: row;
   position: absolute;
   width: 100%;
-  height: 25%;
+  height: 180px;
   bottom: 0;
   background-color: #ffffff;
 
@@ -96,11 +95,12 @@ export const ContainerRight = styled.View`
 `;
 
 export const LogoCampus = styled.Image`
-  width: 80%;
-  height: 80%;
+  width: 110px;
+  height: 140px;
 `;
 
 export const LogoPc = styled.Image`
-  width: 80%;
-  height: 80%;
+margin-left: 10%;
+  width: 120px;
+  height: 150px;
 `;
