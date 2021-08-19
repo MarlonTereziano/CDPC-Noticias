@@ -52,7 +52,7 @@ export const About: React.FC = () => {
                     A CDPC Notícias nasceu com um propósito bem definido: Ser a forma mais fácil de deixar
                     estudantes e população mais próximos da informação! Este portal de notícias na palma da sua mão
                     reune informações de diversas fontes, como por exemplo: UOL, Abril, Globo, CanalTech, entre inúmeras outras plataformas, sempre
-                    filtrando informações relacionadas da Ciência, e não se preocupe, as atualizações são automáticas!
+                    filtrando informações relacionadas a Ciência, e não se preocupe, as atualizações são automáticas!
                 </Text>
                 <Icon name="newspaper-o" size={200} color='black' />
             </ContentAbout>
